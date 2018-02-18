@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2018-02-18T17:10:32">
+<MovieInformation>
+<MovieID>1</MovieID>
+<Title>Back to the Future</Title>
+<Synopsis>Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.</Synopsis>
+<ReleaseDate>1985-07-03T00:00:00</ReleaseDate>
+<GenreID>1</GenreID>
+<GenreTitle>Sci-Fi</GenreTitle>
+<Director>Robert Zemeckis</Director>
+<MovieLength>116</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>2</MovieID>
+<Title>Stargate</Title>
+<Synopsis>An interstellar teleportation device, found in Egypt, leads to a planet with humans resembling ancient Egyptians who worship the god Ra.</Synopsis>
+<ReleaseDate>1994-10-28T00:00:00</ReleaseDate>
+<GenreID>1</GenreID>
+<GenreTitle>Sci-Fi</GenreTitle>
+<Director>Roland Emmerich</Director>
+<MovieLength>116</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>3</MovieID>
+<Title>Its a Wonderful Life</Title>
+<Synopsis>An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.</Synopsis>
+<ReleaseDate>1947-01-07T00:00:00</ReleaseDate>
+<GenreID>3</GenreID>
+<GenreTitle>Drama</GenreTitle>
+<Director>Frank Capra</Director>
+<MovieLength>130</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>4</MovieID>
+<Title>My Big Fat Greek Wedding</Title>
+<Synopsis>A young Greek woman falls in love with a non-Greek and struggles to get her family to accept him while she comes to terms with her heritage and cultural identity.</Synopsis>
+<ReleaseDate>2002-08-02T00:00:00</ReleaseDate>
+<GenreID>9</GenreID>
+<GenreTitle>Comedy</GenreTitle>
+<Director>Joel Zwick</Director>
+<MovieLength>95</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>5</MovieID>
+<Title>Clue</Title>
+<Synopsis>Six guests are invited to a strange house and must cooperate with the staff to solve a murder mystery.  ABCDEF</Synopsis>
+<ReleaseDate>1985-12-13T00:00:00</ReleaseDate>
+<GenreID>9</GenreID>
+<GenreTitle>Comedy</GenreTitle>
+<Director>Jonathan Lynn</Director>
+<MovieLength>94</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>6</MovieID>
+<Title>Kellys Heroes</Title>
+<Synopsis>A group of U.S. soldiers sneaks across enemy lines to get their hands on a secret stash of Nazi treasure</Synopsis>
+<ReleaseDate>1970-06-23T00:00:00</ReleaseDate>
+<GenreID>9</GenreID>
+<GenreTitle>Comedy</GenreTitle>
+<Director>Brian G. Hutton</Director>
+<MovieLength>144</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>7</MovieID>
+<Title>The Good The Bad and The Ugly</Title>
+<Synopsis>A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.</Synopsis>
+<ReleaseDate>1967-12-29T00:00:00</ReleaseDate>
+<GenreID>6</GenreID>
+<GenreTitle>Western</GenreTitle>
+<Director>Sergio Leone</Director>
+<MovieLength>161</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>8</MovieID>
+<Title>You Only Live Twice</Title>
+<Synopsis>Agent 007 and the Japanese secret service ninja force must find and stop the true culprit of a series of spacejackings before nuclear war is provoked.</Synopsis>
+<ReleaseDate>1967-06-13T00:00:00</ReleaseDate>
+<GenreID>5</GenreID>
+<GenreTitle>Thriller</GenreTitle>
+<Director>Lewis Gilbert</Director>
+<MovieLength>117</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>9</MovieID>
+<Title>The Bourne Identity</Title>
+<Synopsis>A man is picked up by a fishing boat, bullet-riddled and suffering from amnesia, before racing to elude assassins and regain his memory.</Synopsis>
+<ReleaseDate>2002-06-14T00:00:00</ReleaseDate>
+<GenreID>2</GenreID>
+<GenreTitle>Action</GenreTitle>
+<Director>Doug Liman</Director>
+<MovieLength>119</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>10</MovieID>
+<Title>Star Trek: First Contact</Title>
+<Synopsis>The Borg travel back in time intent on preventing Earths first contact with an alien species. Captain Picard and his crew pursue them to ensure that Zefram Cochrane makes his maiden flight reaching warp speed.</Synopsis>
+<ReleaseDate>1996-11-22T20:25:47</ReleaseDate>
+<GenreID>1</GenreID>
+<GenreTitle>Sci-Fi</GenreTitle>
+<Director>Jonathan Frakes</Director>
+<MovieLength>111</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>11</MovieID>
+<Title>12 Angry Men</Title>
+<Synopsis>A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.</Synopsis>
+<ReleaseDate>1957-04-01T20:27:16</ReleaseDate>
+<GenreID>3</GenreID>
+<GenreTitle>Dama</GenreTitle>
+<Director>Sidney Lumet</Director>
+<MovieLength>96</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>12</MovieID>
+<Title>Lord of the Rings: The Fellowshp of the Ring</Title>
+<Synopsis>A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle Earth from the Dark Lord Sauron.</Synopsis>
+<ReleaseDate>2001-12-19T20:27:57</ReleaseDate>
+<GenreID>7</GenreID>
+<GenreTitle>Fantasy</GenreTitle>
+<Director>Peter Jackson</Director>
+<MovieLength>178</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>13</MovieID>
+<Title>Shawshank Redemption</Title>
+<Synopsis>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.</Synopsis>
+<ReleaseDate>1994-10-14T20:28:43</ReleaseDate>
+<GenreID>3</GenreID>
+<GenreTitle>Drama</GenreTitle>
+<Director>Frank Darabont</Director>
+<MovieLength>142</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>14</MovieID>
+<Title>Hobbit: An Unexpected Journey</Title>
+<Synopsis>A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.</Synopsis>
+<ReleaseDate>2012-12-14T20:29:29</ReleaseDate>
+<GenreID>7</GenreID>
+<GenreTitle>Fantasy</GenreTitle>
+<Director>Peter Jackson</Director>
+<MovieLength>169</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>15</MovieID>
+<Title>It</Title>
+<Synopsis>A group of bullied kids band together when a shapeshifting monster, taking the appearance of a clown, begins hunting children.</Synopsis>
+<ReleaseDate>2017-09-08T20:30:21</ReleaseDate>
+<GenreID>4</GenreID>
+<GenreTitle>Horror</GenreTitle>
+<Director>Andy Muschietti</Director>
+<MovieLength>135</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>16</MovieID>
+<Title>Pet Semetary</Title>
+<Synopsis>Behind a young family&apos;s home in Maine is a terrible secret that holds the power of life after death. When tragedy strikes, the threat of that power soon becomes undeniable.</Synopsis>
+<ReleaseDate>1989-04-21T20:31:01</ReleaseDate>
+<GenreID>4</GenreID>
+<GenreTitle>Horror</GenreTitle>
+<Director>Mary Lambert</Director>
+<MovieLength>103</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>17</MovieID>
+<Title>Moonraker</Title>
+<Synopsis>James Bond investigates the mid-air theft of a space shuttle, and discovers a plot to commit global genocide.</Synopsis>
+<ReleaseDate>1979-06-29T20:31:54</ReleaseDate>
+<GenreID>5</GenreID>
+<GenreTitle>Thriller</GenreTitle>
+<Director>Lewis Gilbert</Director>
+<MovieLength>126</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>18</MovieID>
+<Title>The Outlaw Jose Wales</Title>
+<Synopsis>A Missouri farmer joins a Confederate guerrilla unit and winds up on the run from the Union soldiers who murdered his family.</Synopsis>
+<ReleaseDate>1976-08-07T20:32:48</ReleaseDate>
+<GenreID>6</GenreID>
+<GenreTitle>Western</GenreTitle>
+<Director>Clint Eastwood</Director>
+<MovieLength>135</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>19</MovieID>
+<Title>For a Fistfull of Dollars</Title>
+<Synopsis>A wandering gunfighter plays two rival families against each other in a town torn apart by greed, pride, and revenge.</Synopsis>
+<ReleaseDate>1967-01-18T20:33:40</ReleaseDate>
+<GenreID>6</GenreID>
+<GenreTitle>Western</GenreTitle>
+<Director>Sergio Leone </Director>
+<MovieLength>99</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>20</MovieID>
+<Title>For a Few Dollars More</Title>
+<Synopsis>Two bounty hunters with the same intentions team up to track down a Western outlaw.</Synopsis>
+<ReleaseDate>1967-05-10T20:34:50</ReleaseDate>
+<GenreID>6</GenreID>
+<GenreTitle>Western</GenreTitle>
+<Director>Sergio Leone</Director>
+<MovieLength>132</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>21</MovieID>
+<Title>Space Cowboys</Title>
+<Synopsis>When a retired engineer is called upon to rescue a failing satellite, he insists that his equally old teammates accompany him into space.</Synopsis>
+<ReleaseDate>2000-08-04T20:35:34</ReleaseDate>
+<GenreID>2</GenreID>
+<GenreTitle>Action</GenreTitle>
+<Director>Clint Eastwood</Director>
+<MovieLength>130</MovieLength>
+</MovieInformation>
+<MovieInformation>
+<MovieID>22</MovieID>
+<Title>Firefox</Title>
+<Synopsis>A pilot is sent into the Soviet Union on a mission to steal a prototype jet fighter that can be partially controlled by a neuralink</Synopsis>
+<ReleaseDate>1982-06-18T20:36:17</ReleaseDate>
+<GenreID>5</GenreID>
+<GenreTitle>Thriller</GenreTitle>
+<Director>Clint Eastwood</Director>
+<MovieLength>136</MovieLength>
+</MovieInformation>
+</dataroot>
