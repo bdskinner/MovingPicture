@@ -15,7 +15,8 @@ namespace MovingPicture
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);        
+            Application["dataFilePath"] = HttpContext.Current.Server.MapPath("~/App_Data/MovieInformation.xml");
         }
     }
 }

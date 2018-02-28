@@ -1,0 +1,19 @@
+Topical Web App
+
+General
+
+* Data Annotations “Display” Attribute
+https://stackoverflow.com/questions/12735757/mvc-4-data-annotations-display-attribute
+
+Themes
+
+* Bootstrap Themes
+https://bootswatch.com
+
+
+
+
+
+Azure Information
+
+App Name: NMMovingPictureAssoc
