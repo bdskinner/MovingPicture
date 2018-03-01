@@ -46,7 +46,10 @@ Page @(pagedList.PageCount < pagedList.PageNumber ? 0 : pagedList.PageNumber) of
 <br />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create")*@
+    <div class="form-group">
+        <input type="submit" value="Create New" onclick="location.href='@Url.Action("Create", "Movie")'" class="btn btn-default" />
+    </div>
 </p>
 <table class="table">
     <tr>

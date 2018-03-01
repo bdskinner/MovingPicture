@@ -11,51 +11,81 @@ namespace MovingPicture.Controllers
 {
     public class MovieController : Controller
     {
-        // GET: Movie/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: Movie/Create
+        
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Movie movie)
         {
             try
             {
-                // TODO: Add insert logic here
+                //Create a new instance of the movie repository.
+                MovieRepository movieRepository = new MovieRepository();
+
+                using (movieRepository)
+                {
+                    movieRepository.Insert(movie);
+                }
 
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View("Error");
             }
         }      
-
-        // GET: Movie/Delete/5
+        
+        [HttpGet]
         public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Movie/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
         {
             try
             {
-                // TODO: Add delete logic here
+                //Variable Declarations.
+                Movie movie = new Movie();
+                MovieRepository movieRepository = new MovieRepository();
 
+                //Get the current information for the movie with the ID value provided.
+                using (movieRepository)
+                {
+                    movie = movieRepository.SelectOne(id);
+                }
+
+                //Return the view with the information.
+                return View(movie);
+            }
+            catch
+            {
+                //If an error occured display an error message.
+                return View("Error");
+            }
+        }
+        
+        [HttpPost]
+        public ActionResult Delete(int id, Movie movie)
+        {
+            try
+            {
+                //Variable Declarations.
+                MovieRepository movieRepository = new MovieRepository();
+
+                //Get the current information for the movie with the ID value provided.
+                using (movieRepository)
+                {
+                    movieRepository.Delete(id);
+                }
+
+                //Return to the list of movies.
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View("Error");
             }
         }
-
-        // GET: Movie/Details/5
+        
         public ActionResult Details(int ID)
         {
             //Variable Declarations.
@@ -71,25 +101,52 @@ namespace MovingPicture.Controllers
             return View(movie);
         }
 
-        // GET: Movie/Edit/5
+        [HttpGet]
         public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Movie/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
         {
             try
             {
-                // TODO: Add update logic here
+                //Variable Declarations.
+                Movie movie = new Movie();
+                MovieRepository movieRepository = new MovieRepository();
 
+                //Get the current information for the movie with the ID value provided.
+                using (movieRepository)
+                {
+                    movie = movieRepository.SelectOne(id);
+                }
+
+                //Return the view with the information.
+                return View(movie);
+            }
+            catch
+            {
+                //If an error occured display an error message.
+                return View("Error");
+            }
+        }
+        
+        [HttpPost]
+        public ActionResult Edit(Movie movie)
+        {
+            try
+            {
+                //Variable Declarations.
+                MovieRepository movieRepository = new MovieRepository();
+
+                //Save the updated information for the selected movie.
+                using (movieRepository)
+                {
+                    movieRepository.Update(movie);
+                }
+
+                //Return to the list of movies.
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                //If an error occured display an error message.
+                return View("Error");
             }
         }
 
@@ -121,7 +178,7 @@ namespace MovingPicture.Controllers
             //Variable Declarations.
             MovieRepository movieRepository = new MovieRepository();
             IEnumerable<Movie> movies;
-            int pageSize = 5;
+            int pageSize = 50;
             int pageNumber = (page ?? 1);
 
             //Get the list of movies.
