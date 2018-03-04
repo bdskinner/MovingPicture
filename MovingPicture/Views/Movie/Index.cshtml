@@ -34,7 +34,7 @@
         <br />
         <div class="form-group">
             <input type="submit" value="Find Movies" class="btn col-md-2 col-md-offset-2" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="button" value="Reset Movie List" onclick="location.href='@Url.Action("Index", "Movies")'" class="btn col-md-2 col-md-offset-2" />
+            <input type="button" value="Reset Movie List" onclick="location.href='@Url.Action("Index", "Movie")'" class="btn col-md-2 col-md-offset-2" />
         </div>
     </div>
 }
@@ -46,7 +46,10 @@ Page @(pagedList.PageCount < pagedList.PageNumber ? 0 : pagedList.PageNumber) of
 <br />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create")*@
+    <div class="form-group">
+        <input type="submit" value="Create New" onclick="location.href='@Url.Action("Create", "Movie")'" class="btn btn-default" />
+    </div>
 </p>
 <table class="table">
     <tr>
@@ -75,9 +78,13 @@ Page @(pagedList.PageCount < pagedList.PageNumber ? 0 : pagedList.PageNumber) of
             @Html.DisplayFor(modelItem => item.MovieLength) min.
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MovieID }) |
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.MovieID }) |
             @Html.ActionLink("Details", "Details", new { id=item.MovieID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MovieID })
+            @Html.ActionLink("Delete", "Delete", new { id=item.MovieID })*@
+
+            <input type="button" value="Details" class="btn btn-default" onclick="location.href='@Url.Action("Details", "Movie", new { id = item.MovieID })'" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Edit" class="btn btn-default" onclick="location.href='@Url.Action("Edit", "Movie", new { id = item.MovieID })'" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Delete" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", "Movie", new { id = item.MovieID })'" />
         </td>
     </tr>
 }

@@ -10,10 +10,17 @@ Themes
 * Bootstrap Themes
 https://bootswatch.com
 
+* HTML Helper Dropdown List filled with list of genres
+http://www.tutorialsteacher.com/mvc/htmlhelper-dropdownlist-dropdownlistfor
+
+* Data Annotations for Data Validation
+https://joeylicc.wordpress.com/2013/06/20/asp-net-mvc-model-validation-using-data-annotations/
+
 
 
 
 
 Azure Information
 
-App Name: NMMovingPictureAssoc
+App Name: MovingPictureAssoc
+Azure URL: http://movingpictureassoc.azurewebsites.net

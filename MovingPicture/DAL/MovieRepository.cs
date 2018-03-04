@@ -65,7 +65,7 @@ namespace MovingPicture.DAL
             //Get the largest ID value for the movies currently stored in the XML file.
             int currentMaxID = (from m in _movies
                                 orderby m.MovieID descending
-                                select m).SingleOrDefault().MovieID;
+                                select m).FirstOrDefault().MovieID;
 
             //Return the next number in the sequence after the max ID value.
             return currentMaxID + 1;

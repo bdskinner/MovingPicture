@@ -11,51 +11,91 @@ namespace MovingPicture.Controllers
 {
     public class MovieController : Controller
     {
-        // GET: Movie/Create
+        [HttpGet]
         public ActionResult Create()
         {
+            //Get a list of genres for the "Filter by Genre" list.
+            ViewBag.Genres = ListOfGenres();
+
+            //Display the view.
             return View();
         }
-
-        // POST: Movie/Create
+        
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Movie movie)
         {
             try
             {
-                // TODO: Add insert logic here
+                //Create a new instance of the movie repository.
+                MovieRepository movieRepository = new MovieRepository();
 
+                using (movieRepository)
+                {
+                    //Get the ID value for the genre selected.
+                    movie.GenreID = GetGenreID(movie.GenreTitle);
+
+                    //Add the new movie.
+                    movieRepository.Insert(movie);
+                }
+
+                //Return the user to the list of movies.
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                //If an error occurred display the error page.
+                return View("Error");
             }
         }      
-
-        // GET: Movie/Delete/5
+        
+        [HttpGet]
         public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Movie/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
         {
             try
             {
-                // TODO: Add delete logic here
+                //Variable Declarations.
+                Movie movie = new Movie();
+                MovieRepository movieRepository = new MovieRepository();
 
+                //Get the current information for the movie with the ID value provided.
+                using (movieRepository)
+                {
+                    movie = movieRepository.SelectOne(id);
+                }
+
+                //Return the view with the information.
+                return View(movie);
+            }
+            catch
+            {
+                //If an error occured display an error message.
+                return View("Error");
+            }
+        }
+        
+        [HttpPost]
+        public ActionResult Delete(int id, Movie movie)
+        {
+            try
+            {
+                //Variable Declarations.
+                MovieRepository movieRepository = new MovieRepository();
+
+                //Get the current information for the movie with the ID value provided.
+                using (movieRepository)
+                {
+                    movieRepository.Delete(id);
+                }
+
+                //Return to the list of movies.
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View("Error");
             }
         }
-
-        // GET: Movie/Details/5
+        
         public ActionResult Details(int ID)
         {
             //Variable Declarations.
@@ -71,26 +111,83 @@ namespace MovingPicture.Controllers
             return View(movie);
         }
 
-        // GET: Movie/Edit/5
+        [HttpGet]
         public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Movie/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
         {
             try
             {
-                // TODO: Add update logic here
+                //Variable Declarations.
+                Movie movie = new Movie();
+                MovieRepository movieRepository = new MovieRepository();
 
+                //Get a list of genres for the "Filter by Genre" list.
+                ViewBag.Genres = ListOfGenres();
+
+                //Get the current information for the movie with the ID value provided.
+                using (movieRepository)
+                {
+                    movie = movieRepository.SelectOne(id);
+                }
+
+                //Return the view with the information.
+                return View(movie);
+            }
+            catch
+            {
+                //If an error occured display an error message.
+                return View("Error");
+            }
+        }
+        
+        [HttpPost]
+        public ActionResult Edit(Movie movie)
+        {
+            try
+            {
+                //Variable Declarations.
+                MovieRepository movieRepository = new MovieRepository();
+
+                //Save the updated information for the selected movie.
+                using (movieRepository)
+                {
+                    //Get the ID value for the genre selected.
+                    movie.GenreID = GetGenreID(movie.GenreTitle);
+
+                    //Update the movie's information with the information entered by the user.
+                    movieRepository.Update(movie);
+                }
+
+                //Return to the list of movies.
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                //If an error occured display an error message.
+                return View("Error");
             }
+        }
+
+        private int GetGenreID(string genreTitle)
+        {
+            //Variable Declarations.
+            int genreID = 0;
+            MovieRepository movieRepository = new MovieRepository();
+            IEnumerable<Movie> movies;
+
+            //Get the list of movies.
+            using (movieRepository)
+            {
+                movies = movieRepository.SelectAll() as IList<Movie>;
+            }
+
+            //Get the ID value for the genre based on the description.
+            genreID = (from m in movies
+                       where m.GenreTitle == genreTitle
+                       select m.GenreID).FirstOrDefault();
+
+
+            //Return the ID value for the genre.
+            return genreID;
         }
 
         private IEnumerable<string> ListOfGenres()
@@ -121,7 +218,7 @@ namespace MovingPicture.Controllers
             //Variable Declarations.
             MovieRepository movieRepository = new MovieRepository();
             IEnumerable<Movie> movies;
-            int pageSize = 5;
+            int pageSize = 50;
             int pageNumber = (page ?? 1);
 
             //Get the list of movies.
@@ -173,6 +270,8 @@ namespace MovingPicture.Controllers
             MovieRepository movieReporsitory = new MovieRepository();
             IEnumerable<Movie> movies;
             IEnumerable<Movie> movieResults = null;
+            int pageSize = 50;
+            int pageNumber = (page ?? 1);
 
             //Get a list of all movies.
             using (movieReporsitory)
@@ -186,20 +285,23 @@ namespace MovingPicture.Controllers
             //If search criteria was passed to the action search by the title entered.
             if (searchCriteria != null)
             {
-                movieResults = from m in movies
-                               where m.Title.ToUpper().Contains(searchCriteria.ToUpper())
-                               select m;
+                movies = from m in movies
+                        where m.Title.ToUpper().Contains(searchCriteria.ToUpper())
+                        select m;
             }
 
             if (genreFilter != "" || genreFilter == null)
             {
-                movieResults = from m in movieResults
-                               where m.GenreTitle == genreFilter
-                               select m;
+                movies = from m in movies
+                         where m.GenreTitle == genreFilter
+                         select m;
             }
 
+            //Set Paginate settings.
+            movies = movies.ToPagedList(pageNumber, pageSize);
+
             //Return the view.
-            return View(movieResults);
+            return View(movies);
         }
     }
 }
