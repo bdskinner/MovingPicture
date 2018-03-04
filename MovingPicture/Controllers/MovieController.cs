@@ -31,10 +31,13 @@ namespace MovingPicture.Controllers
 
                 using (movieRepository)
                 {
+<<<<<<< HEAD
                     //Get the ID value for the genre selected.
                     movie.GenreID = GetGenreID(movie.GenreTitle);
 
                     //Add the new movie.
+=======
+>>>>>>> origin/master
                     movieRepository.Insert(movie);
                 }
 
@@ -43,7 +46,10 @@ namespace MovingPicture.Controllers
             }
             catch
             {
+<<<<<<< HEAD
                 //If an error occurred display the error page.
+=======
+>>>>>>> origin/master
                 return View("Error");
             }
         }      
@@ -80,6 +86,7 @@ namespace MovingPicture.Controllers
             {
                 //Variable Declarations.
                 MovieRepository movieRepository = new MovieRepository();
+<<<<<<< HEAD
 
                 //Get the current information for the movie with the ID value provided.
                 using (movieRepository)
@@ -87,6 +94,15 @@ namespace MovingPicture.Controllers
                     movieRepository.Delete(id);
                 }
 
+=======
+
+                //Get the current information for the movie with the ID value provided.
+                using (movieRepository)
+                {
+                    movieRepository.Delete(id);
+                }
+
+>>>>>>> origin/master
                 //Return to the list of movies.
                 return RedirectToAction("Index");
             }
@@ -119,6 +135,7 @@ namespace MovingPicture.Controllers
                 //Variable Declarations.
                 Movie movie = new Movie();
                 MovieRepository movieRepository = new MovieRepository();
+<<<<<<< HEAD
 
                 //Get a list of genres for the "Filter by Genre" list.
                 ViewBag.Genres = ListOfGenres();
@@ -129,6 +146,15 @@ namespace MovingPicture.Controllers
                     movie = movieRepository.SelectOne(id);
                 }
 
+=======
+
+                //Get the current information for the movie with the ID value provided.
+                using (movieRepository)
+                {
+                    movie = movieRepository.SelectOne(id);
+                }
+
+>>>>>>> origin/master
                 //Return the view with the information.
                 return View(movie);
             }
@@ -150,10 +176,13 @@ namespace MovingPicture.Controllers
                 //Save the updated information for the selected movie.
                 using (movieRepository)
                 {
+<<<<<<< HEAD
                     //Get the ID value for the genre selected.
                     movie.GenreID = GetGenreID(movie.GenreTitle);
 
                     //Update the movie's information with the information entered by the user.
+=======
+>>>>>>> origin/master
                     movieRepository.Update(movie);
                 }
 
